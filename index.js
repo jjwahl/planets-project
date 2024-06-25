@@ -24,7 +24,7 @@ fs.createReadStream('kepler-data.csv')
     })
     .on('end',() => {
         console.log(results.map((planet) => {
-            return planet['kepler_name']
+            return `Planet name: ${planet['kepler_name']} -- Orbital Period: ${planet['koi_period']} `
         }));
         console.log(`${results.length} habitable planets found!`);
     });
